@@ -13,11 +13,13 @@ import Icon from "./atomic/ions/Icon";
 import Text from "./atomic/ions/Text";
 import GalioTheme from "./theme";
 
+import HTMLView from 'react-native-htmlview';
+
 const { width } = Dimensions.get("screen");
 
 // 
 function AccordionContent({ content, contentStyle }) {
-  return <Text style={[styles.content, contentStyle]}>{content}</Text>;
+  return <HTMLView style={[styles.content, contentStyle]} value={content}/>;
 }
 
 function AccordionHeader({
